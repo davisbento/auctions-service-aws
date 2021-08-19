@@ -22,7 +22,7 @@ async function getAuctions(event, context) {
 		};
 	} catch (err) {
 		console.error(err);
-		throw createError.InternalServerError(err);
+		throw new createError.InternalServerError(err);
 	}
 }
 

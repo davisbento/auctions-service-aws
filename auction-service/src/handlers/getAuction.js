@@ -20,7 +20,7 @@ async function getAuction(event, context) {
 			.promise();
 
 		if (!result.Item) {
-			throw createError.NotFound('Auction not found');
+			throw new createError.NotFound('Auction not found');
 		}
 
 		return {
@@ -29,7 +29,7 @@ async function getAuction(event, context) {
 		};
 	} catch (err) {
 		console.error(err);
-		throw createError.InternalServerError(err);
+		throw new createError.InternalServerError(err);
 	}
 }
 
