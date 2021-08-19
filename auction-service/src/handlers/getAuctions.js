@@ -18,7 +18,7 @@ async function getAuctions(event, context) {
 
 		return {
 			statusCode: 200,
-			body: JSON.stringify(result.items)
+			body: JSON.stringify(result.Items)
 		};
 	} catch (err) {
 		console.error(err);
